@@ -152,6 +152,7 @@ body {
             top: 0;
             left: 0;
             object-fit: cover;
+            background-size: auto auto;
         }
     }
 }
@@ -398,14 +399,239 @@ body {
         }
     }
 }
-.container {
-}
+
 .section {
     &__body {
         text-align: center;
     }
 }
 
+//////////////////////////////////////////////////////////////////////
+.customers {
+    margin: 100px 0 0 0;
+    display: flex;
+    position: relative;
+    // line-height: 0;
+    // width: 100%;
+    min-height: 100%;
+    // height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-image: linear-gradient(-53deg, rgb(5, 185, 212, 0.9), rgb(29, 233, 182, 0.9)), url("../img/Fon/Fon2.png");
+    &__row {
+        display: flex;
+        // align-items: center;
+        @media (max-width: 768px) {
+            display: block;
+            text-align: center;
+        }
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 50px 0 0 0;
+        @media (max-width: 768px) {
+            display: block;
+            text-align: center;
+        }
+    }
+
+    &__title {
+        @include adaptiv-font(45, 40);
+        line-height: 1.2;
+        font-weight: 600;
+        color: #ffffff;
+        @media (max-width: 768px) {
+            br {
+                display: none;
+            }
+        }
+    }
+
+    &__text {
+        @include adaptiv-font(15, 13);
+        line-height: 25px;
+        font-weight: 600;
+        color: #ffffff;
+        padding: 23px 0 0 0;
+        @media (max-width: 768px) {
+            br {
+                display: none;
+            }
+        }
+    }
+
+    &__btn {
+        background-color: #061e37;
+        color: #ffffff;
+        margin: 75px 0 0 0;
+        padding: 0 25px 0 28px;
+        @media (max-width: 768px) {
+            margin: 40px 0 0 0;
+        }
+    }
+
+    &__comments {
+        min-width: 0;
+        max-width: 840px;
+        flex: 1 1 840px;
+        padding: 12px 0 50px 100px;
+        @media (max-width: 768px) {
+            // flex: 0 1 auto;
+            // max-width: 100%;
+            padding: 0 0 30px 0;
+        }
+    }
+}
+
+/* Слайдер */
+.slick-slider {
+}
+/* Слайдер запущен */
+.slick-slider.slick-initialized {
+}
+/* Слайдер с точками */
+.slick-slider.slick-dotted {
+}
+/* Ограничивающая оболочка */
+.slick-list {
+    overflow: hidden;
+    // display: flex;
+    // flex-direction: column;
+}
+/* Лента слайдов */
+.slick-track {
+    display: flex;
+}
+/* Слайд */
+.slick-slide {
+}
+/* Слайд активный (показывается) */
+.slick-slide.slick-active {
+}
+/* Слайд основной */
+.slick-slide.slick-current {
+}
+/* Слайд по центру */
+.slick-slide.slick-center {
+}
+/* Клонированный слайд */
+.slick-slide.slick-cloned {
+}
+/* Стрелка */
+.slick-arrow {
+}
+/* Стрелка влево */
+.slick-arrow.slick-prev {
+}
+/* Стрелка вправо */
+.slick-arrow.slick-next {
+}
+/* Стрелка не активная */
+.slick-arrow.slick-disabled {
+}
+/* Точки (булиты) */
+.slick-dots {
+}
+.slick-dots li {
+}
+/* Активная точка */
+.slick-dots li.slick-active {
+}
+/* Элемент точки */
+.slick-dots li button {
+}
+
+.slider {
+    min-width: 0;
+    position: relative;
+    text-align: center;
+
+    &__itom {
+        display: flex;
+        // flex-direction: row;
+        padding: 75px 0 0 0;
+        // margin: 50px 0 0 0;
+        @media (max-width: 768px) {
+            display: block;
+            padding: 50px 0 0 0;
+        }
+    }
+    &__itom-img {
+        display: flex;
+        align-items: center;
+        @media (max-width: 768px) {
+            justify-content: center;
+        }
+    }
+    &__itom-body {
+        padding: 30px;
+        margin: 0 0 0 30px;
+        background-color: #ffffff;
+        box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.15);
+        border-radius: 5px;
+        opacity: 0.2;
+        @media (max-width: 768px) {
+            margin: 0;
+            padding: 15px;
+        }
+    }
+
+    &__itom-author {
+        font-size: 18px;
+        line-height: 25px;
+        font-weight: 700;
+        color: #061e37;
+    }
+    &__itom-text {
+        padding: 15px 0 0 0;
+        @include adaptiv-font(15, 10);
+        line-height: 25px;
+        font-weight: 400;
+        font-style: italic;
+        color: #78909c;
+    }
+}
+.slider .slick-track {
+    display: block;
+}
+/* Слайд активный (показывается) */
+.slider .slick-slide.slick-active {
+    .slider__itom-body {
+        // background-color: #ffffff;
+        // box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.15);
+        // border-radius: 5px;
+        opacity: 1;
+    }
+}
+
+.slider .slick-arrow {
+    position: absolute;
+    right: 42%;
+    z-index: 10;
+    font-size: 0;
+    width: 25px;
+    height: 18px;
+    @media (max-width: 768px) {
+        opacity: 0;
+    }
+}
+.slider .slick-arrow.slick-prev {
+    background: url("../img/icons/arrowUp.png") 0 0 /100% no-repeat;
+    margin: 25px 0 0 0;
+    @media (max-width: 768px) {
+        margin: 0;
+    }
+}
+.slider .slick-arrow.slick-next {
+    background: url("../img/icons/arrowDown.png") 0 0 /100% no-repeat;
+    margin: 2% 0 30px 0;
+    @media (max-width: 768px) {
+        margin: 0;
+    }
+}
 //</ОСНОВНАЯ СЕТКА>==================================================================================================================================================================================================================
 
 //<ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
