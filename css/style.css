@@ -123,7 +123,6 @@ h6 {
 .top__content {
   flex: 1 1 auto;
   display: flex;
-  justify-content: center;
   align-items: center;
 }
 @media (max-width: 768px) {
@@ -134,15 +133,14 @@ h6 {
 }
 .top__row {
   display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 @media (max-width: 768px) {
   .top__row {
     flex-direction: column-reverse;
     padding: 0 15px;
   }
-}
-.top__body {
-  padding-right: 250px;
 }
 @media (max-width: 768px) {
   .top__body {
@@ -190,6 +188,14 @@ h6 {
     font-size: calc(14px + 4 * (100vw / 1600));
   }
 }
+@media (max-width: 768px) {
+  .top__text {
+    line-height: 40px;
+  }
+  .top__text br {
+    display: none;
+  }
+}
 .top__btn1 {
   color: #ffffff;
   background-color: #061e37;
@@ -208,13 +214,16 @@ h6 {
 }
 .top__img {
   border: 1px solid #061e37;
+  border-radius: 5px;
   flex: 0 0 42.331%;
   min-height: 320px;
+  overflow: hidden;
   position: relative;
 }
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   .top__img {
     min-height: 280px;
+    max-height: 280px;
   }
 }
 @media (max-width: 320px) {
@@ -229,12 +238,16 @@ h6 {
   top: 0;
   left: 0;
   object-fit: cover;
-  background-size: auto auto;
 }
 
 .tool__body {
   text-align: center;
   padding-top: 97px;
+}
+@media (max-width: 768px) {
+  .tool__body {
+    padding-top: 40px;
+  }
 }
 .tool__subtitle {
   font-size: 25px;
@@ -247,10 +260,10 @@ h6 {
   display: flex;
   padding-top: 95px;
 }
-@media (max-width: 697px) {
+@media (max-width: 768px) {
   .tool__row {
     display: block;
-    padding-top: 75px;
+    padding-top: 50px;
   }
 }
 .tool__btn {
@@ -259,6 +272,11 @@ h6 {
   padding: 0 25px 0 28px;
   margin: 75px 0 100px 0;
 }
+@media (max-width: 768px) {
+  .tool__btn {
+    margin: 50px 0 75px 0;
+  }
+}
 .tool__footer {
   width: 100%;
 }
@@ -266,7 +284,7 @@ h6 {
   display: flex;
   width: 100%;
 }
-@media (max-width: 697px) {
+@media (max-width: 768px) {
   .tool__footer-row {
     display: block;
   }
@@ -338,9 +356,9 @@ h6 {
 .itom:first-child {
   padding: 0;
 }
-@media (max-width: 580px) {
+@media (max-width: 768px) {
   .itom {
-    padding: 20px 30px 0 30px;
+    padding: 30px 30px 0 30px;
   }
 }
 .itom__img {
@@ -351,9 +369,9 @@ h6 {
   padding: 33px 0 0 0;
   text-align: center;
 }
-@media (max-width: 580px) {
+@media (max-width: 768px) {
   .itom__body {
-    padding: 17px 0 0 0;
+    padding: 10px 0 0 0;
   }
 }
 .itom__title {
@@ -374,9 +392,9 @@ h6 {
     display: none;
   }
 }
-@media (max-width: 580px) {
+@media (max-width: 768px) {
   .itom__text {
-    padding: 15px 0 0 0;
+    padding: 10px 0 0 0;
   }
 }
 
@@ -386,6 +404,11 @@ h6 {
 
 .services__title {
   padding: 97px 0 0 0;
+}
+@media (max-width: 768px) {
+  .services__title {
+    padding: 60px 0 0 0;
+  }
 }
 .services__content {
   max-width: 800px;
