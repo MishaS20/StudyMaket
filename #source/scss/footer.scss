@@ -1,0 +1,109 @@
+.text-footery {
+    opacity: 0.5;
+    font-size: 15px;
+    line-height: 25px;
+    font-weight: 400;
+    color: #ffffff;
+    @media (min-width: 768px) {
+        &:hover {
+            color: #f7d4d4;
+        }
+    }
+}
+.footer {
+    background-color: #061e37;
+    padding: 95px 0;
+    @media (max-width: 768px) {
+        padding: 50px 0;
+    }
+    &__row {
+    }
+
+    &__menu-navigation {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @media (max-width: 768px) {
+            flex-direction: column;
+        }
+    }
+
+    &__logo {
+        display: flex;
+    }
+
+    &__menu {
+    }
+
+    &__bottom {
+        margin: 46px 0 0 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @media (max-width: 768px) {
+            flex-direction: column;
+            margin: 23px 0 0 0;
+        }
+    }
+
+    &__privecy {
+        @media (max-width: 768px) {
+            margin: 0 0 15px 0;
+        }
+    }
+
+    &__privecy-policy {
+    }
+    &__link-description {
+        position: relative;
+        padding: 0 0 0 26px;
+        margin: 0 0 0 17px;
+        @media (max-width: 320px) {
+            padding: 0 0 0 13px;
+            margin: 0 0 0 12px;
+        }
+    }
+    &__link-description::before {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        top: 6px;
+        left: 0;
+        width: 7px;
+        height: 7px;
+        background-color: #ffffff;
+        border-radius: 50%;
+    }
+
+    &__contacts-link {
+        padding-right: 20px;
+    }
+}
+
+.menu {
+    &__body {
+    }
+
+    &__list-footer {
+        display: flex;
+        @media (max-width: 768px) {
+            margin: 25px 0 0 0;
+        }
+    }
+
+    &__link-footer {
+        font-size: 15px;
+        font-weight: 600;
+        color: #ffffff;
+        padding: 0 25px;
+        transition: color 0.3s ease 0s;
+        @media (min-width: 768px) {
+            &:hover {
+                color: #f7d4d4;
+            }
+        }
+        @media (max-width: 768px) {
+            padding: 0 6px;
+        }
+    }
+}

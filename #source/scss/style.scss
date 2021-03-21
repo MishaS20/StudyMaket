@@ -22,7 +22,7 @@ $minWidthContainer: 1480;
 $md1: $minWidthContainer + 12;
 $md2: 991.98;
 $md3: 767.98;
-$md4: 47998;
+$md4: 320;
 //</ПЕРЕМЕННЫЕ>==================================================================================================================================================================================================================
 //<ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>======================================================================================================================================================================================================
 @import "null.scss";
@@ -153,7 +153,7 @@ body {
         }
     }
 }
-////////////////////////////////////////////////////////////////////////////////////////////////////////
+//<TOOL>==============================================================================================================================================================================================================
 
 .tool {
     &__body {
@@ -303,7 +303,9 @@ body {
 .link {
     text-align: center;
 }
-//////////////////////////////////////////service
+///</TOOL>==============================================================================================================================================================================================================
+
+//<SERVICES>==============================================================================================================================================================================================================
 .services {
     &__title {
         padding: 97px 0 0 0;
@@ -321,13 +323,13 @@ body {
     &__item {
         padding: 0 0 15px 0;
     }
-
     &__item-title {
         display: flex;
         align-items: center;
         cursor: pointer;
         position: relative;
         padding: 19px 0;
+        background-color: rgba(245, 241, 241, 0.8);
         span {
             font-size: 15px;
             line-height: 1.2;
@@ -370,9 +372,6 @@ body {
         }
     }
 
-    &__contnent-img {
-    }
-
     &__item-text {
         font-size: 15px;
         line-height: 25px;
@@ -396,8 +395,9 @@ body {
         text-align: center;
     }
 }
+//</SERVICES>==============================================================================================================================================================================================================
 
-//////////////////////////////////////////////////////////////////////
+//<CUSTOMERS>==============================================================================================================================================================================================================
 .customers {
     margin: 100px 0 0 0;
     display: flex;
@@ -610,11 +610,214 @@ body {
         margin: 0;
     }
 }
+//</CUSTOMERS>==============================================================================================================================================================================================================
+.contact {
+    background-color: #fafafa;
+    &__container {
+        max-width: 620px;
+        margin: 0 auto;
+        padding: 47px 10px 100px 10px;
+    }
+
+    &__title {
+        text-align: center;
+    }
+
+    &__text {
+        text-align: center;
+    }
+
+    &__form {
+        margin: 47px 0 0 0;
+    }
+
+    &__person-date1 {
+        display: flex;
+        justify-content: space-between;
+        @media (max-width: 380px) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    &__name {
+        font-size: 14px;
+        line-height: 30px;
+        font-weight: 500;
+        color: #061e37;
+        margin: 0 10px 0 0;
+        @media (max-width: 380px) {
+            margin: 0 0 10px 0;
+        }
+    }
+    &__surname {
+        font-size: 14px;
+        line-height: 30px;
+        font-weight: 500;
+        color: #061e37;
+        @media (max-width: 380px) {
+            flex-direction: column;
+        }
+    }
+
+    &__person-date2 {
+        display: flex;
+        justify-content: space-between;
+        margin: 20px 0;
+        @media (max-width: 380px) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__email {
+        font-size: 14px;
+        line-height: 30px;
+        font-weight: 500;
+        color: #061e37;
+        margin: 0 10px 0 0;
+        @media (max-width: 380px) {
+            margin: 0 0 10px 0;
+        }
+    }
+
+    &__phone {
+        font-size: 14px;
+        line-height: 30px;
+        font-weight: 500;
+        color: #061e37;
+    }
+
+    &__person-message {
+        display: flex;
+    }
+
+    &__meassege {
+        flex: 1 0 auto;
+        height: 150px;
+        border: 1px solid #061e37;
+        border-radius: 5px;
+        padding: 20px;
+    }
+
+    &__subscribe {
+        //
+    }
+
+    &__button {
+        height: 50px;
+        background-color: #1de9b6;
+        box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.15);
+        border-radius: 5px;
+        font-size: 16px;
+        line-height: 30px;
+        font-weight: 500;
+        text-transform: uppercase;
+        color: #ffffff;
+        padding: 0 45px;
+        transition: all 0.3s ease 0s;
+
+        @media (min-width: 768px) {
+            &:hover {
+                background-color: #587da5;
+            }
+        }
+    }
+}
+
+.subscribe {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px -10px 0 -10px;
+    padding: 0 10px;
+}
+
+.contact {
+    &__subscribe-text {
+        font-size: 15px;
+        line-height: 1.2;
+        font-weight: 500;
+        color: #061e37;
+    }
+}
+input[type="checkbox"] {
+    display: none;
+}
+
+label {
+    color: #000;
+    cursor: default;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+}
+
+label:before {
+    content: " ";
+    color: #000;
+    display: inline-block;
+    margin-right: 19px;
+    position: relative;
+    text-align: center;
+    text-indent: 0px;
+    width: 17px;
+    height: 17px;
+    background-color: #fafafa;
+    border: 2px solid #000;
+    border-image: initial;
+    vertical-align: middle;
+    font-size: 15px;
+    font-weight: 400;
+    transition: all 0.3s ease 0s;
+}
+
+input:checked + label:before {
+    /* глифон - галочка */
+    content: "\2714";
+}
+
+input:disabled + label:before {
+    color: #aaa;
+}
+
+::-webkit-scrollbar-button {
+    background-image: url("");
+    background-repeat: no-repeat;
+    width: 8px;
+    height: 0px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #ecedee;
+}
+
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 0px;
+    border-radius: 6px;
+    background-color: #6dc0c8;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #56999f;
+}
+
+::-webkit-resizer {
+    background-image: url("");
+    background-repeat: no-repeat;
+    width: 4px;
+    height: 0px;
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+    // left: -20px;
+}
 //</ОСНОВНАЯ СЕТКА>==================================================================================================================================================================================================================
 
 //<ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
 @import "ui.scss";
 @import "header.scss";
+@import "footer.scss";
 // @import "footer.scss";
 //</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
 
